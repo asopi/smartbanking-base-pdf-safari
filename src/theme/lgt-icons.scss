@@ -1,0 +1,18 @@
+@import "./colors";
+
+@mixin lgt_icons() {
+  font-family: "LGT Icon Font", "LGT Icon Font Truetype" !important;
+  font-style: normal !important;
+}
+
+.performance_negative::before {
+  @include lgt_icons();
+  content: "\F015";
+  color: $color_red_01;
+}
+
+.performance_positive::before {
+  @include lgt_icons();
+  content: "\F014";
+  color: $color_green_01;
+}

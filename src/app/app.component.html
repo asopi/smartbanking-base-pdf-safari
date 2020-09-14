@@ -1,4 +1,24 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<div class="example-config">
+    <button class="k-button" (click)="pdf.saveAs('invoice.pdf')">
+      Save As PDF...
+    </button>
+</div>
+<kendo-pdf-export
+#pdf
+paperSize="A4"
+margin="2cm"
+[proxyURL]="'http://localhost:8081/save'"
+[proxyTarget]="'_blank'"
+[forceProxy]="true"
+[repeatHeaders]="false"
+[keepTogether]="'.keep-together'"
+[title]="'PDF ' + title"
+[fileName]="title"
+[producer]="''"
+[creator]="''"
+>
+    <h1>{{ title }}</h1>
+    <div>
+        Test Test Test
+    </div>
+</kendo-pdf-export>
