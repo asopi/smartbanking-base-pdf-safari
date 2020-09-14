@@ -5,7 +5,7 @@ const http = require('http');
 const app = express();
 
 // API file
-const api = require('./src/server/api');
+const api = require('./server/api');
 
 // Parsers
 app.use(bodyParser.json());
